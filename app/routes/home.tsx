@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+
+import QR from '../qr/qr'
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +10,10 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div className="w-full h-full flex justify-center items-center">
+      <QR />
+    </div>
+    
+  );
 }
